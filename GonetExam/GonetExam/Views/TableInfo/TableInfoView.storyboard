@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table Info View-->
+        <scene sceneID="te5-RW-Vfa">
+            <objects>
+                <tableViewController storyboardIdentifier="TableInfoView" id="IcX-1q-dRv" customClass="TableInfoView" customModule="GonetExam" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LLH-HZ-xmF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CellInfo" rowHeight="94" id="KEf-Zy-PrK" customClass="TableInfoCellView" customModule="GonetExam" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="94"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KEf-Zy-PrK" id="UWQ-Qs-JN8">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="THB-wc-Cod">
+                                            <rect key="frame" x="20" y="17" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="1Ds-JC-dsN"/>
+                                                <constraint firstAttribute="width" constant="60" id="7lS-rt-nOw"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bYE-7Q-A6b">
+                                            <rect key="frame" x="96" y="11" width="298" height="72"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9BN-MI-aa3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="298" height="41.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mK3-p2-DyI">
+                                                    <rect key="frame" x="0.0" y="51.5" width="298" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="THB-wc-Cod" firstAttribute="centerY" secondItem="UWQ-Qs-JN8" secondAttribute="centerY" id="9S3-yu-XgF"/>
+                                        <constraint firstItem="THB-wc-Cod" firstAttribute="leading" secondItem="UWQ-Qs-JN8" secondAttribute="leadingMargin" id="C85-xe-JqV"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="bYE-7Q-A6b" secondAttribute="trailing" id="Gfc-hp-A7K"/>
+                                        <constraint firstItem="bYE-7Q-A6b" firstAttribute="top" secondItem="UWQ-Qs-JN8" secondAttribute="topMargin" id="aK7-kf-s6v"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="bYE-7Q-A6b" secondAttribute="bottom" id="djd-gt-suE"/>
+                                        <constraint firstItem="bYE-7Q-A6b" firstAttribute="leading" secondItem="THB-wc-Cod" secondAttribute="trailing" constant="16" id="jQI-xM-0Uj"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLbl" destination="mK3-p2-DyI" id="EJm-IO-C3N"/>
+                                    <outlet property="imageLogo" destination="THB-wc-Cod" id="uir-QS-sRJ"/>
+                                    <outlet property="titleLbl" destination="9BN-MI-aa3" id="37m-Hw-oVm"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="IcX-1q-dRv" id="e4H-n3-M6x"/>
+                            <outlet property="delegate" destination="IcX-1q-dRv" id="DhC-JJ-l2U"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rG9-tT-h1C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="78"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="585" height="292"/>
+    </resources>
+</document>

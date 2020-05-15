@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View-->
+        <scene sceneID="L0C-uF-O9j">
+            <objects>
+                <viewController storyboardIdentifier="HomeView" id="ELe-06-70K" customClass="HomeView" customModule="GonetExam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lR4-YI-FIF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZXz-kN-tjw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="71.5"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Zr2-Cb-o3i">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="72.5"/>
+                                        <segments>
+                                            <segment title="Table"/>
+                                            <segment title="Threads"/>
+                                        </segments>
+                                        <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="changeOption:" destination="ELe-06-70K" eventType="valueChanged" id="F7G-xX-qk9"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMr-sh-NYV">
+                                <rect key="frame" x="0.0" y="115.5" width="414" height="746.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3eC-9o-ntY" firstAttribute="bottom" secondItem="rMr-sh-NYV" secondAttribute="bottom" id="3Of-4U-OkC"/>
+                            <constraint firstItem="rMr-sh-NYV" firstAttribute="top" secondItem="ZXz-kN-tjw" secondAttribute="bottom" id="3Tx-0P-yet"/>
+                            <constraint firstItem="rMr-sh-NYV" firstAttribute="leading" secondItem="3eC-9o-ntY" secondAttribute="leading" id="6Pz-xF-d9z"/>
+                            <constraint firstItem="3eC-9o-ntY" firstAttribute="trailing" secondItem="ZXz-kN-tjw" secondAttribute="trailing" id="7P3-YS-HAi"/>
+                            <constraint firstItem="ZXz-kN-tjw" firstAttribute="top" secondItem="3eC-9o-ntY" secondAttribute="top" id="CUh-FW-b4I"/>
+                            <constraint firstItem="ZXz-kN-tjw" firstAttribute="height" secondItem="lR4-YI-FIF" secondAttribute="height" multiplier="0.08" id="Yr8-qM-a3I"/>
+                            <constraint firstItem="ZXz-kN-tjw" firstAttribute="leading" secondItem="3eC-9o-ntY" secondAttribute="leading" id="aO5-JA-6CD"/>
+                            <constraint firstItem="3eC-9o-ntY" firstAttribute="trailing" secondItem="rMr-sh-NYV" secondAttribute="trailing" id="u9B-8p-3VU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3eC-9o-ntY"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="rMr-sh-NYV" id="ITq-XP-8Wy"/>
+                        <outlet property="segmentOptions" destination="Zr2-Cb-o3i" id="CFX-Nm-YYr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cYu-VG-Y3s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42" y="-3"/>
+        </scene>
+    </scenes>
+</document>
