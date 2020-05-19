@@ -8,18 +8,21 @@
 
 import Foundation
 
-class DetailPresenter  {
+class DetailPresenter: DetailPresenterProtocol  {
     
     // MARK: Properties
     weak var view: DetailViewProtocol?
     var interactor: DetailInteractorInputProtocol?
     var wireFrame: DetailWireFrameProtocol?
+    var content: ContentModel?
     
-}
-
-extension DetailPresenter: DetailPresenterProtocol {
-    // TODO: implement presenter methods
     func viewDidLoad() {
+        view?.configNavigationBar(showNavigation: true)
+        view?.configView(content: content!)
+    }
+    
+    func viewWillDisappear() {
+        view?.configNavigationBar(showNavigation: false)
     }
 }
 

@@ -12,8 +12,8 @@ import UIKit
 class HomeWireFrame: HomeWireFrameProtocol {
 
     class func createHomeModule() -> UIViewController {
-        let viewController = mainStoryboard.instantiateViewController(withIdentifier: "HomeView")
-        if let view = viewController as? HomeView {
+        let navController = mainStoryboard.instantiateViewController(withIdentifier: "HomeView")
+        if let view = navController.children.first as? HomeView {
             let presenter: HomePresenterProtocol & HomeInteractorOutputProtocol & TableInfoToParentViewProtocol = HomePresenter()
             let interactor: HomeInteractorInputProtocol & HomeRemoteDataManagerOutputProtocol = HomeInteractor()
             let localDataManager: HomeLocalDataManagerInputProtocol = HomeLocalDataManager()
@@ -29,7 +29,7 @@ class HomeWireFrame: HomeWireFrameProtocol {
             interactor.remoteDatamanager = remoteDataManager
             remoteDataManager.remoteRequestHandler = interactor
             
-            return viewController
+            return navController
         }
         return UIViewController()
     }
@@ -38,18 +38,21 @@ class HomeWireFrame: HomeWireFrameProtocol {
         return UIStoryboard(name: "HomeView", bundle: Bundle.main)
     }
     
-    func presentTableView(root: UIViewController, presenter: HomePresenter) -> UIViewController {
-        let tableInfo = TableInfoWireFrame.createTableInfoModule(root: root, presenterHome: presenter)
+    func presentTableView(presenter: HomePresenter) -> UIViewController {
+        let tableInfo = TableInfoWireFrame.createTableInfoModule(presenterHome: presenter)
         return tableInfo
     }
     
-    func segueToDetailView(from view: HomeViewProtocol, withData: String) {
-        print("AQUI AQUI 2")
+    func presentThreadView() -> UIViewController {
+        let threadView = ThreadWireFrame.createThreadModule()
+        return threadView
+    }
+    
+    func segueToDetailView(from view: HomeViewProtocol, withData: ContentModel) {
         
-        let newDetailView = DetailWireFrame.createDetailModule()
+        let newDetailView = DetailWireFrame.createDetailModule(with: withData)
         
         if let currentView = view as? UIViewController {
-            print("AQUI AQUI 3")
             currentView.navigationController?.pushViewController(newDetailView, animated: true)
         }
     }

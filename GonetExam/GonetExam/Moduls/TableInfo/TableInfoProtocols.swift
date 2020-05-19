@@ -13,11 +13,12 @@ protocol TableInfoViewProtocol: class {
     // PRESENTER -> VIEW
     var presenter: TableInfoPresenterProtocol? { get set }
     func configTableView()
+    func updateContentTable(content: [ContentModel])
 }
 
 protocol TableInfoWireFrameProtocol: class {
     // PRESENTER -> WIREFRAME
-    static func createTableInfoModule(root: UIViewController, presenterHome: HomePresenter) -> UIViewController
+    static func createTableInfoModule(presenterHome: HomePresenter) -> UIViewController
 }
 
 protocol TableInfoPresenterProtocol: class {
@@ -28,7 +29,7 @@ protocol TableInfoPresenterProtocol: class {
     var parentProtocol: TableInfoToParentViewProtocol? { get set }
     
     func viewDidLoad()
-    func perfomSegueToDetail()
+    func perfomSegueToDetail(content: ContentModel)
 }
 
 protocol TableInfoInteractorOutputProtocol: class {
@@ -40,6 +41,8 @@ protocol TableInfoInteractorInputProtocol: class {
     var presenter: TableInfoInteractorOutputProtocol? { get set }
     var localDatamanager: TableInfoLocalDataManagerInputProtocol? { get set }
     var remoteDatamanager: TableInfoRemoteDataManagerInputProtocol? { get set }
+    
+    func getContentData() -> [ContentModel]
 }
 
 protocol TableInfoDataManagerInputProtocol: class {
@@ -61,5 +64,5 @@ protocol TableInfoLocalDataManagerInputProtocol: class {
 
 
 protocol TableInfoToParentViewProtocol: class {
-    func performSegueToDetail()
+    func performSegueToDetail(content: ContentModel)
 }

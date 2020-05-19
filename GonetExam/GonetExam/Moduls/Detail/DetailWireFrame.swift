@@ -11,7 +11,7 @@ import UIKit
 
 class DetailWireFrame: DetailWireFrameProtocol {
 
-    class func createDetailModule() -> UIViewController {
+    class func createDetailModule(with content:ContentModel) -> UIViewController {
         let viewController = mainStoryboard.instantiateViewController(withIdentifier: "DetailView")
         if let view = viewController as? DetailView {
             let presenter: DetailPresenterProtocol & DetailInteractorOutputProtocol = DetailPresenter()
@@ -24,6 +24,7 @@ class DetailWireFrame: DetailWireFrameProtocol {
             presenter.view = view
             presenter.wireFrame = wireFrame
             presenter.interactor = interactor
+            presenter.content = content
             interactor.presenter = presenter
             interactor.localDatamanager = localDataManager
             interactor.remoteDatamanager = remoteDataManager

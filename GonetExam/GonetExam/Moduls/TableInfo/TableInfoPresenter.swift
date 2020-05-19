@@ -21,10 +21,13 @@ extension TableInfoPresenter: TableInfoPresenterProtocol {
     // TODO: implement presenter methods
     func viewDidLoad() {
         view?.configTableView()
+        if let arrContent = interactor?.getContentData() {
+            view?.updateContentTable(content: arrContent)
+        }
     }
     
-    func perfomSegueToDetail() {
-        parentProtocol?.performSegueToDetail()
+    func perfomSegueToDetail(content: ContentModel) {
+        parentProtocol?.performSegueToDetail(content: content)
     }
 }
 

@@ -11,7 +11,7 @@ import UIKit
 
 class TableInfoWireFrame: TableInfoWireFrameProtocol {
 
-    class func createTableInfoModule(root: UIViewController, presenterHome: HomePresenter) -> UIViewController {
+    class func createTableInfoModule(presenterHome: HomePresenter) -> UIViewController {
         let viewController = mainStoryboard.instantiateViewController(withIdentifier: "TableInfoView")
         if let view = viewController as? TableInfoView {
             let presenter: TableInfoPresenterProtocol & TableInfoInteractorOutputProtocol = TableInfoPresenter()

@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8841BF9F246F8099009E4424 /* ThreadInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8841BF98246F8099009E4424 /* ThreadInteractor.swift */; };
+		8841BFA0246F8099009E4424 /* ThreadLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8841BF99246F8099009E4424 /* ThreadLocalDataManager.swift */; };
+		8841BFA1246F8099009E4424 /* ThreadPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8841BF9A246F8099009E4424 /* ThreadPresenter.swift */; };
+		8841BFA2246F8099009E4424 /* ThreadProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8841BF9B246F8099009E4424 /* ThreadProtocols.swift */; };
+		8841BFA3246F8099009E4424 /* ThreadRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8841BF9C246F8099009E4424 /* ThreadRemoteDataManager.swift */; };
+		8841BFA4246F8099009E4424 /* ThreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8841BF9D246F8099009E4424 /* ThreadView.swift */; };
+		8841BFA5246F8099009E4424 /* ThreadWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8841BF9E246F8099009E4424 /* ThreadWireFrame.swift */; };
+		8841BFA7246F80D7009E4424 /* ThreadView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8841BFA6246F80D7009E4424 /* ThreadView.storyboard */; };
+		884B81682473179100D9F3A3 /* SynchronizedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884B81672473179100D9F3A3 /* SynchronizedArray.swift */; };
 		888A0850246DED81000433A3 /* TableInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A0849246DED81000433A3 /* TableInfoInteractor.swift */; };
 		888A0851246DED81000433A3 /* TableInfoLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A084A246DED81000433A3 /* TableInfoLocalDataManager.swift */; };
 		888A0852246DED81000433A3 /* TableInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A084B246DED81000433A3 /* TableInfoPresenter.swift */; };
@@ -24,6 +33,7 @@
 		888A0868246DF228000433A3 /* HomeWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A0861246DF228000433A3 /* HomeWireFrame.swift */; };
 		888A086B246DF243000433A3 /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888A086A246DF243000433A3 /* HomeView.storyboard */; };
 		888A086D246E0C6F000433A3 /* TableInfoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A086C246E0C6F000433A3 /* TableInfoCellView.swift */; };
+		889147D7246F12700035D6DE /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889147D6246F12700035D6DE /* ContentModel.swift */; };
 		88B7E19B246DBA8F0094D89F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7E19A246DBA8F0094D89F /* AppDelegate.swift */; };
 		88B7E19D246DBA8F0094D89F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7E19C246DBA8F0094D89F /* SceneDelegate.swift */; };
 		88B7E1A5246DBA8F0094D89F /* GonetExam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88B7E1A3246DBA8F0094D89F /* GonetExam.xcdatamodeld */; };
@@ -40,6 +50,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8841BF98246F8099009E4424 /* ThreadInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadInteractor.swift; sourceTree = "<group>"; };
+		8841BF99246F8099009E4424 /* ThreadLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadLocalDataManager.swift; sourceTree = "<group>"; };
+		8841BF9A246F8099009E4424 /* ThreadPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadPresenter.swift; sourceTree = "<group>"; };
+		8841BF9B246F8099009E4424 /* ThreadProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadProtocols.swift; sourceTree = "<group>"; };
+		8841BF9C246F8099009E4424 /* ThreadRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadRemoteDataManager.swift; sourceTree = "<group>"; };
+		8841BF9D246F8099009E4424 /* ThreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadView.swift; sourceTree = "<group>"; };
+		8841BF9E246F8099009E4424 /* ThreadWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadWireFrame.swift; sourceTree = "<group>"; };
+		8841BFA6246F80D7009E4424 /* ThreadView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThreadView.storyboard; sourceTree = "<group>"; };
+		884B81672473179100D9F3A3 /* SynchronizedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronizedArray.swift; sourceTree = "<group>"; };
 		888A0849246DED81000433A3 /* TableInfoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableInfoInteractor.swift; sourceTree = "<group>"; };
 		888A084A246DED81000433A3 /* TableInfoLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableInfoLocalDataManager.swift; sourceTree = "<group>"; };
 		888A084B246DED81000433A3 /* TableInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableInfoPresenter.swift; sourceTree = "<group>"; };
@@ -57,6 +76,7 @@
 		888A0861246DF228000433A3 /* HomeWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireFrame.swift; sourceTree = "<group>"; };
 		888A086A246DF243000433A3 /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
 		888A086C246E0C6F000433A3 /* TableInfoCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableInfoCellView.swift; sourceTree = "<group>"; };
+		889147D6246F12700035D6DE /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		88B7E197246DBA8F0094D89F /* GonetExam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GonetExam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B7E19A246DBA8F0094D89F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88B7E19C246DBA8F0094D89F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,19 +105,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		888A0847246DED2D000433A3 /* Views */ = {
+		8841BF97246F8048009E4424 /* Thread */ = {
 			isa = PBXGroup;
 			children = (
+				8841BF98246F8099009E4424 /* ThreadInteractor.swift */,
+				8841BF99246F8099009E4424 /* ThreadLocalDataManager.swift */,
+				8841BF9A246F8099009E4424 /* ThreadPresenter.swift */,
+				8841BF9B246F8099009E4424 /* ThreadProtocols.swift */,
+				8841BF9C246F8099009E4424 /* ThreadRemoteDataManager.swift */,
+				8841BF9D246F8099009E4424 /* ThreadView.swift */,
+				8841BF9E246F8099009E4424 /* ThreadWireFrame.swift */,
+				8841BFA6246F80D7009E4424 /* ThreadView.storyboard */,
+			);
+			path = Thread;
+			sourceTree = "<group>";
+		};
+		888A0847246DED2D000433A3 /* Moduls */ = {
+			isa = PBXGroup;
+			children = (
+				8841BF97246F8048009E4424 /* Thread */,
 				88D5AF53246E72AF0049F214 /* Detail */,
 				888A085A246DF205000433A3 /* Home */,
 				888A0859246DF1FA000433A3 /* TableInfo */,
 			);
-			path = Views;
+			path = Moduls;
 			sourceTree = "<group>";
 		};
 		888A0848246DED34000433A3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				889147D6246F12700035D6DE /* ContentModel.swift */,
+				884B81672473179100D9F3A3 /* SynchronizedArray.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -153,7 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				888A0848246DED34000433A3 /* Models */,
-				888A0847246DED2D000433A3 /* Views */,
+				888A0847246DED2D000433A3 /* Moduls */,
 				88B7E19A246DBA8F0094D89F /* AppDelegate.swift */,
 				88B7E19C246DBA8F0094D89F /* SceneDelegate.swift */,
 				88B7E1A6246DBA910094D89F /* Assets.xcassets */,
@@ -240,6 +278,7 @@
 				88B7E1AA246DBA910094D89F /* LaunchScreen.storyboard in Resources */,
 				88B7E1A7246DBA910094D89F /* Assets.xcassets in Resources */,
 				888A086B246DF243000433A3 /* HomeView.storyboard in Resources */,
+				8841BFA7246F80D7009E4424 /* ThreadView.storyboard in Resources */,
 				88D5AF63246E73960049F214 /* DetailView.storyboard in Resources */,
 				888A0858246DEF6B000433A3 /* TableInfoView.storyboard in Resources */,
 			);
@@ -252,30 +291,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8841BFA3246F8099009E4424 /* ThreadRemoteDataManager.swift in Sources */,
 				888A0854246DED81000433A3 /* TableInfoRemoteDataManager.swift in Sources */,
 				88D5AF60246E72E40049F214 /* DetailView.swift in Sources */,
 				888A0862246DF228000433A3 /* HomeInteractor.swift in Sources */,
 				888A0863246DF228000433A3 /* HomeLocalDataManager.swift in Sources */,
+				8841BFA5246F8099009E4424 /* ThreadWireFrame.swift in Sources */,
 				888A0868246DF228000433A3 /* HomeWireFrame.swift in Sources */,
 				88B7E19B246DBA8F0094D89F /* AppDelegate.swift in Sources */,
 				88D5AF5D246E72E40049F214 /* DetailPresenter.swift in Sources */,
+				8841BFA0246F8099009E4424 /* ThreadLocalDataManager.swift in Sources */,
 				888A0865246DF228000433A3 /* HomeProtocols.swift in Sources */,
 				888A0851246DED81000433A3 /* TableInfoLocalDataManager.swift in Sources */,
 				88D5AF5B246E72E40049F214 /* DetailInteractor.swift in Sources */,
+				8841BF9F246F8099009E4424 /* ThreadInteractor.swift in Sources */,
 				88D5AF61246E72E40049F214 /* DetailWireFrame.swift in Sources */,
 				888A0866246DF228000433A3 /* HomeRemoteDataManager.swift in Sources */,
 				88B7E1A5246DBA8F0094D89F /* GonetExam.xcdatamodeld in Sources */,
 				88D5AF5C246E72E40049F214 /* DetailLocalDataManager.swift in Sources */,
+				8841BFA1246F8099009E4424 /* ThreadPresenter.swift in Sources */,
 				88D5AF5E246E72E40049F214 /* DetailProtocols.swift in Sources */,
 				888A0853246DED81000433A3 /* TableInfoProtocols.swift in Sources */,
 				888A0856246DED81000433A3 /* TableInfoWireFrame.swift in Sources */,
+				889147D7246F12700035D6DE /* ContentModel.swift in Sources */,
 				888A0850246DED81000433A3 /* TableInfoInteractor.swift in Sources */,
 				888A0864246DF228000433A3 /* HomePresenter.swift in Sources */,
 				88D5AF5F246E72E40049F214 /* DetailRemoteDataManager.swift in Sources */,
 				888A0855246DED81000433A3 /* TableInfoView.swift in Sources */,
 				888A0867246DF228000433A3 /* HomeView.swift in Sources */,
 				888A086D246E0C6F000433A3 /* TableInfoCellView.swift in Sources */,
+				884B81682473179100D9F3A3 /* SynchronizedArray.swift in Sources */,
+				8841BFA2246F8099009E4424 /* ThreadProtocols.swift in Sources */,
 				88B7E19D246DBA8F0094D89F /* SceneDelegate.swift in Sources */,
+				8841BFA4246F8099009E4424 /* ThreadView.swift in Sources */,
 				888A0852246DED81000433A3 /* TableInfoPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

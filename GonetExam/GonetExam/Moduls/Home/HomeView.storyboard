@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YG7-ih-5Pd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,16 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View-->
+        <!--Home-->
         <scene sceneID="L0C-uF-O9j">
             <objects>
-                <viewController storyboardIdentifier="HomeView" id="ELe-06-70K" customClass="HomeView" customModule="GonetExam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ELe-06-70K" customClass="HomeView" customModule="GonetExam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lR4-YI-FIF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZXz-kN-tjw">
-                                <rect key="frame" x="0.0" y="44" width="414" height="71.5"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="71.5"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Zr2-Cb-o3i">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="72.5"/>
@@ -32,7 +32,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMr-sh-NYV">
-                                <rect key="frame" x="0.0" y="115.5" width="414" height="746.5"/>
+                                <rect key="frame" x="0.0" y="159.5" width="414" height="702.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
@@ -49,6 +49,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3eC-9o-ntY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Home" id="zQK-Ys-qCu"/>
                     <connections>
                         <outlet property="contentView" destination="rMr-sh-NYV" id="ITq-XP-8Wy"/>
                         <outlet property="segmentOptions" destination="Zr2-Cb-o3i" id="CFX-Nm-YYr"/>
@@ -56,7 +57,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cYu-VG-Y3s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="42" y="-3"/>
+            <point key="canvasLocation" x="950.72463768115949" y="-3.3482142857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UOb-wd-JE2">
+            <objects>
+                <navigationController storyboardIdentifier="HomeView" automaticallyAdjustsScrollViewInsets="NO" id="YG7-ih-5Pd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8kF-4c-1nO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ELe-06-70K" kind="relationship" relationship="rootViewController" id="VhQ-xG-bfc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YgD-Pi-jak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40.579710144927539" y="-3.3482142857142856"/>
         </scene>
     </scenes>
 </document>

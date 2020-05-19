@@ -23,17 +23,34 @@ extension HomePresenter: HomePresenterProtocol {
     
     // TODO: implement presenter methods
     func viewDidLoad() {
+        view?.configView()
         view?.createTableView()
     }
     
     func createTableView() -> UIViewController {
-        guard let currentView = view as? UIViewController else { return UIViewController() }
         
-        
-        if let viewController = wireFrame?.presentTableView(root: currentView, presenter: self) {
+        if let viewController = wireFrame?.presentTableView(presenter: self) {
             return viewController
         }
         return UIViewController()
+    }
+    
+    func createThreadView() -> UIViewController {
+        
+        if let viewController = wireFrame?.presentThreadView() {
+            return viewController
+        }
+        return UIViewController()
+        
+    }
+    
+    func showThreadView(show: Bool) {
+        view?.hideTableView()
+        if show {
+            view?.createThreadView()
+        }else {
+            view?.removeLastView()
+        }
     }
 }
 
@@ -42,8 +59,7 @@ extension HomePresenter: HomeInteractorOutputProtocol {
 }
 
 extension HomePresenter: TableInfoToParentViewProtocol {
-    func performSegueToDetail() {
-        print("Perform segue to: bla bla")
-        wireFrame?.segueToDetailView(from: view!, withData: "HOLA")
+    func performSegueToDetail(content: ContentModel) {
+        wireFrame?.segueToDetailView(from: view!, withData: content)
     }
 }

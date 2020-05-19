@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View-->
+        <scene sceneID="T3y-lE-bCh">
+            <objects>
+                <viewController storyboardIdentifier="DetailView" id="h7i-Ib-gdV" customClass="DetailView" customModule="GonetExam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xgD-yE-fQP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0z7-9w-e22">
+                                <rect key="frame" x="16" y="60" width="343" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ZLx-Ue-8ld">
+                                <rect key="frame" x="87.666666666666686" y="113" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="0vR-bH-OaQ"/>
+                                    <constraint firstAttribute="height" constant="200" id="zOk-ed-Ags"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYK-m9-0PH">
+                                <rect key="frame" x="16" y="329" width="343" height="473"/>
+                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elementum ut mi at porttitor. Duis mattis lectus non aliquet fermentum. Nam mollis ipsum enim, vel sollicitudin massa laoreet ac. Suspendisse imperdiet quis risus a pulvinar. Nunc iaculis tincidunt facilisis. Mauris finibus scelerisque scelerisque. Sed commodo orci dui, eu fringilla arcu accumsan auctor. Nulla facilisi. Donec in neque et ex lacinia lacinia at nec metus. Praesent eu iaculis ligula. Etiam imperdiet erat in arcu eleifend faucibus sed a nulla. Etiam vitae lacus gravida, accumsan elit sit amet, auctor mauris. Ut id ullamcorper justo, in mattis est. Nullam a est magna. Integer eget orci et ipsum consequat volutpat condimentum ut augue. Integer quis interdum arcu.
+
+Quisque pellentesque risus et eleifend ultricies. Mauris tellus quam, tincidunt in velit sed, egestas rhoncus nibh. Etiam ut odio dictum, mollis tortor in, pellentesque enim. Donec lectus magna, tristique bibendum volutpat sed, porta sed diam.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZLx-Ue-8ld" firstAttribute="centerY" secondItem="xgD-yE-fQP" secondAttribute="centerY" id="3xn-ne-zwo"/>
+                            <constraint firstItem="49o-eG-dq9" firstAttribute="trailing" secondItem="0z7-9w-e22" secondAttribute="trailing" constant="16" id="5jl-aL-xcF"/>
+                            <constraint firstItem="0z7-9w-e22" firstAttribute="leading" secondItem="ZLx-Ue-8ld" secondAttribute="trailing" constant="16" id="7Nw-Dg-aWb"/>
+                            <constraint firstItem="0z7-9w-e22" firstAttribute="top" secondItem="49o-eG-dq9" secondAttribute="top" constant="16" id="HMq-Ks-zAx"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="CYK-m9-0PH" secondAttribute="bottom" priority="999" constant="10" id="NXl-26-sLu"/>
+                            <constraint firstItem="ZLx-Ue-8ld" firstAttribute="top" secondItem="0z7-9w-e22" secondAttribute="bottom" constant="10" id="QMB-JJ-HbN"/>
+                            <constraint firstItem="CYK-m9-0PH" firstAttribute="top" secondItem="ZLx-Ue-8ld" secondAttribute="bottom" constant="16" id="bYC-In-skT"/>
+                            <constraint firstItem="CYK-m9-0PH" firstAttribute="leading" secondItem="49o-eG-dq9" secondAttribute="leading" constant="16" id="eRa-OL-bNR"/>
+                            <constraint firstItem="ZLx-Ue-8ld" firstAttribute="leading" secondItem="49o-eG-dq9" secondAttribute="leading" constant="16" id="ip4-WD-uop"/>
+                            <constraint firstItem="49o-eG-dq9" firstAttribute="trailing" secondItem="CYK-m9-0PH" secondAttribute="trailing" constant="16" id="n9o-FX-l98"/>
+                            <constraint firstItem="CYK-m9-0PH" firstAttribute="top" secondItem="0z7-9w-e22" secondAttribute="bottom" constant="16" id="o4h-SR-mso"/>
+                            <constraint firstItem="CYK-m9-0PH" firstAttribute="leading" secondItem="ZLx-Ue-8ld" secondAttribute="trailing" constant="16" id="rUc-QS-nvI"/>
+                            <constraint firstItem="0z7-9w-e22" firstAttribute="leading" secondItem="49o-eG-dq9" secondAttribute="leading" constant="16" id="sSb-bL-5rY"/>
+                            <constraint firstItem="ZLx-Ue-8ld" firstAttribute="centerX" secondItem="xgD-yE-fQP" secondAttribute="centerX" id="z8D-U9-6uV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="49o-eG-dq9"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3xn-ne-zwo"/>
+                                <exclude reference="ip4-WD-uop"/>
+                                <exclude reference="7Nw-Dg-aWb"/>
+                                <exclude reference="o4h-SR-mso"/>
+                                <exclude reference="rUc-QS-nvI"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="3xn-ne-zwo"/>
+                                <exclude reference="QMB-JJ-HbN"/>
+                                <include reference="ip4-WD-uop"/>
+                                <exclude reference="z8D-U9-6uV"/>
+                                <include reference="7Nw-Dg-aWb"/>
+                                <exclude reference="sSb-bL-5rY"/>
+                                <exclude reference="bYC-In-skT"/>
+                                <exclude reference="eRa-OL-bNR"/>
+                                <include reference="o4h-SR-mso"/>
+                                <include reference="rUc-QS-nvI"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLbl" destination="CYK-m9-0PH" id="CIY-OB-LbH"/>
+                        <outlet property="imageName" destination="ZLx-Ue-8ld" id="mww-wa-DCp"/>
+                        <outlet property="titleLbl" destination="0z7-9w-e22" id="9L7-Wf-jpr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2bW-dC-VQ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.57142857142858" y="101.59999999999999"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="585" height="292"/>
+    </resources>
+</document>

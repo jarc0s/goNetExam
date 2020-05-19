@@ -12,14 +12,21 @@ import UIKit
 protocol HomeViewProtocol: class {
     // PRESENTER -> VIEW
     var presenter: HomePresenterProtocol? { get set }
+    
     func createTableView()
+    func createThreadView()
+    
+    func configView()
+    func hideTableView()
+    func removeLastView()
 }
 
 protocol HomeWireFrameProtocol: class {
     // PRESENTER -> WIREFRAME
     static func createHomeModule() -> UIViewController
-    func presentTableView(root: UIViewController, presenter: HomePresenter) -> UIViewController
-    func segueToDetailView(from view: HomeViewProtocol, withData: String)
+    func presentTableView(presenter: HomePresenter) -> UIViewController
+    func presentThreadView() -> UIViewController
+    func segueToDetailView(from view: HomeViewProtocol, withData: ContentModel)
 }
 
 protocol HomePresenterProtocol: class {
@@ -30,6 +37,8 @@ protocol HomePresenterProtocol: class {
     
     func viewDidLoad()
     func createTableView() -> UIViewController
+    func createThreadView() -> UIViewController
+    func showThreadView(show: Bool)
 }
 
 protocol HomeInteractorOutputProtocol: class {

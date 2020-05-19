@@ -12,11 +12,13 @@ import UIKit
 protocol DetailViewProtocol: class {
     // PRESENTER -> VIEW
     var presenter: DetailPresenterProtocol? { get set }
+    func configNavigationBar(showNavigation: Bool)
+    func configView(content: ContentModel)
 }
 
 protocol DetailWireFrameProtocol: class {
     // PRESENTER -> WIREFRAME
-    static func createDetailModule() -> UIViewController
+    static func createDetailModule(with content:ContentModel) -> UIViewController
 }
 
 protocol DetailPresenterProtocol: class {
@@ -24,8 +26,10 @@ protocol DetailPresenterProtocol: class {
     var view: DetailViewProtocol? { get set }
     var interactor: DetailInteractorInputProtocol? { get set }
     var wireFrame: DetailWireFrameProtocol? { get set }
+    var content: ContentModel? { get set }
     
     func viewDidLoad()
+    func viewWillDisappear() 
 }
 
 protocol DetailInteractorOutputProtocol: class {

@@ -13,7 +13,13 @@ class TableInfoView: UITableViewController {
 
     // MARK: Properties
     var presenter: TableInfoPresenterProtocol?
-    //var delegate: TableInfoToParentViewProtocol?
+    var content: [ContentModel] = [ContentModel]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     // MARK: Lifecycle
 
@@ -31,13 +37,17 @@ extension TableInfoView: TableInfoViewProtocol {
         self.tableView.estimatedRowHeight = 90
         //self.tableView.register(TableInfoCellView.self, forCellReuseIdentifier: "CellInfo")
     }
+    
+    func updateContentTable(content: [ContentModel]) {
+        self.content = content
+    }
 }
 
 
 extension TableInfoView {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return content.count
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -46,13 +56,14 @@ extension TableInfoView {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellInfo", for: indexPath) as! TableInfoCellView
-        cell.setContents(title: "Title Uno", description: "Description for title uno, Description for title uno, Description for title uno, Description for title uno, Description for title uno, Description for title uno, Description for title uno, Description for title uno, Description for title uno, Description for title uno, Description for title uno, Description for title uno", image: UIImage(named: "logo")!)
+        let contentModel = content[indexPath.row]
+        cell.setContents(title: contentModel.titleContent, description: contentModel.descriptionContent, image: UIImage(named: contentModel.imageName)!)
         return cell
     }
 //    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("")
-        presenter?.perfomSegueToDetail()
+        let contentModel = content[indexPath.row]
+        presenter?.perfomSegueToDetail(content: contentModel)
     }
     
 }
